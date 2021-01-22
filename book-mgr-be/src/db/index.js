@@ -34,6 +34,8 @@ const connect = () => {
         //保存 同步到MongoDB数据库
         user.save();
 
+        console.log('123');
+
     });
 };
 
