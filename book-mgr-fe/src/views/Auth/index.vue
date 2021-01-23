@@ -10,7 +10,10 @@
             <a-tabs>
                 <a-tab-pane key="1" tab="登入">
                     <div class="item" size="large">
-                        <a-input placeholder="账户" >
+                        <a-input 
+                        size="large" 
+                        placeholder="账户" 
+                        >
                             <template
                             v-slot:prefix
                             >
@@ -19,7 +22,9 @@
                         </a-input>
                     </div>
                     <div class="item" size="large">
-                        <a-input placeholder="密码" >
+                        <a-input 
+                        size="large"
+                        placeholder="密码" >
                             <template
                             v-slot:prefix
                             >
@@ -32,15 +37,22 @@
                         <a href="">忘记密码</a>
                     </div>
 
-                    <div class="item" size="large">
-                        <a-button type="primary">
+                    <div class="item">
+                        <a-button
+                        size="large" 
+                        type="primary"
+                        >
                             登入
                         </a-button>
                     </div>
                 </a-tab-pane>
                 <a-tab-pane key="2" tab="注册">
-                    <div class="item" size="large">
-                        <a-input placeholder="账户" >
+                    <div class="item">
+                        <a-input 
+                        placeholder="账户"
+                        size="large"
+                         v-model:value="regForm.account"
+                        >
                             <template
                             v-slot:prefix
                             >
@@ -48,8 +60,12 @@
                              </template>
                         </a-input>
                     </div>
-                    <div class="item" size="large">
-                        <a-input placeholder="密码" >
+                    <div class="item">
+                        <a-input 
+                        size="large"
+                        placeholder="密码" 
+                        v-model:value="regForm.password"
+                        >
                             <template
                             v-slot:prefix
                             >
@@ -69,7 +85,10 @@
                     </div>
 
                     <div class="item" size="large">
-                        <a-button type="primary">
+                        <a-button 
+                        type="primary"
+                        @click="register"
+                        >
                             注册
                         </a-button>
                     </div>
