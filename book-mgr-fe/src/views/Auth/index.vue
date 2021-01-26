@@ -13,6 +13,7 @@
                         <a-input 
                         size="large" 
                         placeholder="账户" 
+                        v-model:value="loginForm.account"
                         >
                             <template
                             v-slot:prefix
@@ -24,7 +25,9 @@
                     <div class="item" size="large">
                         <a-input 
                         size="large"
-                        placeholder="密码" >
+                        placeholder="密码" 
+                        v-model:value="loginForm.password"
+                        >
                             <template
                             v-slot:prefix
                             >
@@ -41,6 +44,7 @@
                         <a-button
                         size="large" 
                         type="primary"
+                        @click="login"
                         >
                             登入
                         </a-button>
@@ -74,8 +78,12 @@
                         </a-input>
                     </div>
 
-                   <div class="item" size="large">
-                        <a-input placeholder="邀请码" >
+                   <div class="item">
+                        <a-input 
+                        placeholder="邀请码"
+                        size="large"
+                        v-model:value="regForm.inviteCode"
+                         >
                             <template
                             v-slot:prefix
                             >
